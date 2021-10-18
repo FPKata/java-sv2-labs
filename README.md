@@ -1,1 +1,1 @@
-# java-sv2-labs
+# Videós feladatok megoldásai
