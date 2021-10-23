@@ -20,7 +20,7 @@ public class Time {
     }
 
     public boolean earlierThan(Time time){
-        return this.getInMinutes() < time.getInMinutes();
+        return this.getInSeconds() < time.getInSeconds();
     }
     @Override
     public String toString(){
