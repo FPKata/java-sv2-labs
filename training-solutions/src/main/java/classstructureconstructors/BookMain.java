@@ -1,10 +1,7 @@
 package classstructureconstructors;
 
-import java.util.Scanner;
-
 public class BookMain {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         Book book1 = new Book("Orwell","Animal farm");
         Book book2 = new Book("Milne","Winnie the Pooh");
 
