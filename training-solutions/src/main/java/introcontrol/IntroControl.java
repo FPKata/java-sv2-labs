@@ -32,17 +32,13 @@ public class IntroControl {
         return 0;
     }
 
-    public static int calculateConsumption(int prev, int next){
-        if (prev > 9999){
-            prev = prev - 10000;
-            return prev + 9999 - next +1;
+    public static int calculateConsumption(int prev, int next) {
+        if (prev < next) {
+            return 10000 - next + prev;
+        } else {
+            return prev - next;
         }
-        if (next > 9999){
-            next = next - 10000;
-        }
-        return prev - next;
     }
-
     public static void printNumbers(int max){
         for (int i = 0; i <= max; i++){
             System.out.print(i);
