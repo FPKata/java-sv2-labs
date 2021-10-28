@@ -1,13 +1,11 @@
 package intromethods.employee;
 
-import java.time.LocalDate;
-
 public class Employee {
     private String name;
-    private LocalDate hiringYear;
+    private int hiringYear;
     private int salary;
 
-    public Employee(String name, LocalDate hiringYear, int salary){
+    public Employee(String name, int hiringYear, int salary){
         this.name = name;
         this.hiringYear = hiringYear;
         this.salary = salary;
@@ -17,27 +15,20 @@ public class Employee {
         salary = salary + raising;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Employee{" +
-//                "name='" + name + '\'' +
-//                '}';
-//    }
-
-//    @Override
-//    public String toString() {
-//        return "Employee{" +
-//                "name='" + name + '\'' +
-//                ", hiringYear=" + hiringYear +
-//                ", salary=" + salary +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", hiringYear=" + hiringYear +
+                ", salary=" + salary +
+                '}';
+    }
 
     public String getName(){
         return name;
     }
 
-    public LocalDate getHiringYear(){
+    public int getHiringYear(){
         return hiringYear;
     }
 
