@@ -17,4 +17,10 @@ public class Conversion {
         }
         return newArray;
     }
+
+    public int getFirstDecimal(double number){
+        double newDouble = number - (int) (number);
+        int firstDecimal = (int) (newDouble * 10);
+        return firstDecimal;
+    }
 }
