@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Cinema {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your name:");
+        System.out.println("Adja meg a nevét:");
         String name = scanner.nextLine();
-        System.out.println("Enter title of film:");
+        System.out.println("Melyik filmet szeretné megnézni:");
         String title = scanner.nextLine();
-        System.out.println("Enter number of tickets:");
+        System.out.println("Hány darab jegyet vásárol:");
         int numberOfTickets = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Enter number of row:");
+        System.out.println("Melyik sorba kéri a jegyeket:");
         int numberOfRow = scanner.nextInt();
         scanner.nextLine();
         StringBuilder sb = new StringBuilder();
