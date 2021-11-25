@@ -1,40 +1,21 @@
 package introexceptiontrycatchtrace;
 
-import java.util.Scanner;
 
 public class Calculator {
-    Scanner scanner = new Scanner(System.in);
-    public int input1(){
-        int firstOperand = scanner.nextInt();
-        return firstOperand;
+    public int add(int firstOperand, int secondOperand){
+        return firstOperand + secondOperand;
     }
 
-    public int input2(){
-        int secondOperand = scanner.nextInt();
-        return secondOperand;
+    public int subtract(int firstOperand, int secondOperand){
+        return firstOperand - secondOperand;
     }
-    
-    public String inputOperator() {
-        return scanner.nextLine();
+
+    public int multiply(int firstOperand, int secondOperand){
+        return firstOperand * secondOperand;
     }
-    
-    public void getItRight(String operator){
-        switch(operator){
-            case "+":
-                System.out.println(input1() + input2());
-                break;
-            case "-":
-                System.out.println(input1() - input2());
-                break;
-            case "*":
-                System.out.println(input1() * input2());
-                break;
-            case "/":
-                System.out.println(input1() / input2());
-                break;
-            default:
-                System.out.println("Nincs ilyen művelet...");
-        }
+
+    public int divide(int firstOperand, int secondOperand){
+        return firstOperand / secondOperand;
     }
 }
 
