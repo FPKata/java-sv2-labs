@@ -2,7 +2,7 @@ package introexceptionthrow;
 
 public class Validation {
     public void validateName(String name){
-        if (name == null || name.equals("")){
+        if (name.equals(null) || name.equals("")){
             throw new IllegalArgumentException("Given name is empty!");
         }
     }
