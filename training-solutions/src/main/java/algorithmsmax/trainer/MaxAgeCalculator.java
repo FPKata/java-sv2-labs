@@ -4,9 +4,9 @@ import java.util.List;
 
 public class MaxAgeCalculator {
     public Trainer getTrainerWithMaxAge(List<Trainer> trainers){
-        Trainer trainerWithMaxAge = null;
+        Trainer trainerWithMaxAge = trainers.get(0);
         for (Trainer actual : trainers){
-            if (trainerWithMaxAge == null || actual.getAge() > trainerWithMaxAge.getAge()){
+            if (actual.getAge() > trainerWithMaxAge.getAge()){
                 trainerWithMaxAge = actual;
             }
         }
