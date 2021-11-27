@@ -13,15 +13,23 @@ public class Sales {
         return personWithMaxSalesAmount;
     }
 
-//    public Salesperson selectSalesPersonWithFurthestAboveTarget(List<Salesperson> sales){
-//
-//    }
-//
-//    public Salesperson selectSalesPersonWithFurthestBelowTarget(List<Salesperson> sales){
-//
-//    }
-//
-//    public int getMaxDifference(int amount, int target){
-//        return target - amount;
-//    }
+    public Salesperson selectSalesPersonWithFurthestAboveTarget(List<Salesperson> sales){
+        Salesperson best = sales.get(0);
+        for (Salesperson actual : sales){
+            if ((actual.getAmount() - actual.getTarget()) > best.getAmount() - best.getTarget()){
+                best = actual;
+            }
+        }
+        return best;
+    }
+
+    public Salesperson selectSalesPersonWithFurthestBelowTarget(List<Salesperson> sales){
+        Salesperson worst = sales.get(0);
+        for (Salesperson actual : sales){
+            if ((actual.getAmount() - actual.getTarget()) < worst.getAmount() - worst.getTarget()){
+                worst = actual;
+            }
+        }
+        return worst;
+    }
 }

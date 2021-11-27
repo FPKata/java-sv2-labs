@@ -24,4 +24,19 @@ class SalesTest {
         assertEquals(35000, sales.selectSalesPersonWithMaxSalesAmount(salespersons).getTarget());
     }
 
+    @Test
+    void testSelectSalesPersonWithFurthestAboveTarget(){
+        Sales sales = new Sales();
+
+        assertEquals(14000, sales.selectSalesPersonWithFurthestAboveTarget(salespersons).getAmount());
+        assertEquals(6000, sales.selectSalesPersonWithFurthestAboveTarget(salespersons).getTarget());
+    }
+
+    @Test
+    void testSelectSalesPersonWithFurthestBelowTarget(){
+        Sales sales = new Sales();
+
+        assertEquals(25000, sales.selectSalesPersonWithFurthestBelowTarget(salespersons).getAmount());
+        assertEquals(35000, sales.selectSalesPersonWithFurthestBelowTarget(salespersons).getTarget());
+    }
 }
