@@ -1,5 +1,6 @@
-package algorithmstransformation.letters;
+package algorithmstransformation;
 
+import algorithmstransformation.letters.TwoLetters;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
