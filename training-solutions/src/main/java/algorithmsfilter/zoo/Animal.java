@@ -1,4 +1,4 @@
-package algorithmsfilter.prefix.zoo;
+package algorithmsfilter.zoo;
 
 public class Animal {
     private String name;

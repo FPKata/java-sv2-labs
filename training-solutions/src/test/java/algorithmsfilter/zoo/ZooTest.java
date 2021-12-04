@@ -1,4 +1,4 @@
-package algorithmsfilter.prefix.zoo;
+package algorithmsfilter.zoo;
 
 import org.junit.jupiter.api.Test;
 

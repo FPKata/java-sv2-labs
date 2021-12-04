@@ -1,4 +1,4 @@
-package algorithmsfilter.prefix.zoo;
+package algorithmsfilter.zoo;
 
 import java.util.ArrayList;
 import java.util.List;
