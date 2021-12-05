@@ -10,7 +10,7 @@ public class Numbers {
             return numbers[0];
         }else{
             int[] result = Arrays.copyOfRange(numbers, 1, numbers.length);
-            return result[0] + getSum(result);
+            return numbers[0] + getSum(result);
         }
     }
 }
