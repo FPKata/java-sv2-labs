@@ -8,6 +8,10 @@ public class Student {
     private String name;
     private List<Mark> marks = new ArrayList<>();
 
+    public String getName() {
+        return name;
+    }
+
     public Student(String name) {
         if (name.isEmpty()){
             throw new IllegalArgumentException("Student name must not be empty!");
@@ -22,6 +26,11 @@ public class Student {
             throw new NullPointerException("Mark must not be null!");
         }
     }
+
+    public boolean hasAnyMarks(){
+        return !marks.isEmpty();
+    }
+
 
     public double calculateAverage(){
         double sum = 0.0;
@@ -42,7 +51,7 @@ public class Student {
         int count = 0;
         double avg = 0.0;
         for (Mark actual : marks){
-            if (actual.getSubject().equals(subject)){
+            if (actual.getSubject().getSubjectName().equals(subject.getSubjectName())){
                 sum += actual.getMarkType().value;
                 count++;
             }
@@ -58,7 +67,7 @@ public class Student {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (Mark actual :marks){
-            sb.append(name).append(" marks: ").append(actual.getSubject().getSubject()).append(": ")
+            sb.append(name).append(" marks: ").append(actual.getSubject().getSubjectName()).append(": ")
                     .append(actual.getMarkType().text)
                     .append("(")
                     .append(actual.getMarkType().value)

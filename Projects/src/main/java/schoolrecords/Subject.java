@@ -1,13 +1,13 @@
 package schoolrecords;
 
 public class Subject {
-    private String subject;
+    private String subjectName;
 
     public Subject(String subject) {
-        this.subject = subject;
+        this.subjectName = subject;
     }
 
-    public String getSubject() {
-        return subject;
+    public String getSubjectName() {
+        return subjectName;
     }
 }

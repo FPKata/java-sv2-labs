@@ -27,7 +27,7 @@ public class Mark {
 
     @Override
     public String toString() {
-        return markType.text + markType.value;
+        return markType.text + "(" + markType.value + ")";
     }
 
     public MarkType getMarkType() {

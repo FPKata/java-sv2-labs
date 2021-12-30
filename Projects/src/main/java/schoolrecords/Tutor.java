@@ -1,6 +1,5 @@
 package schoolrecords;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Tutor {
@@ -18,8 +17,8 @@ public class Tutor {
 
     public boolean tutorTeachingSubject(Subject subject) {
         boolean taught = false;
-        for (Subject actual : subjects){
-            if (subject.equals(actual)){
+        for (int i = 0; i < subjects.size() && !taught; i++){
+            if (subject.getSubjectName().equals(subjects.get(i).getSubjectName())){
                 taught = true;
             }
         }
