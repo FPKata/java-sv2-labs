@@ -103,21 +103,33 @@ public class ClassRecords {
     }
 
     public Student repetition(){
-        return null;
-    }
-
-    public List<StudyResultByName> listStudyResult(){
-        return null;
+        if (students.isEmpty()){
+            throw new IllegalStateException("No students to select for repetition!");
+        }
+        int index = random.nextInt(students.size());
+        return students.get(index);
     }
 
     public String listStudentNames(){
+        StringBuilder sb = new StringBuilder();
         for (Student actual : students){
-
+            sb.append(actual.getName());
+            if (students.indexOf(actual) < students.size() - 1){
+                sb.append(", ");
+            }
         }
-        return "";
+        return sb.toString();
     }
 
     public String getClassName() {
         return className;
+    }
+
+    public List<StudyResultByName> listStudyResults() {
+        List<StudyResultByName> result = new ArrayList<>();
+        for (Student actual :students){
+            result.add(new StudyResultByName(actual.getName(), actual.calculateAverage()));
+        }
+        return result;
     }
 }

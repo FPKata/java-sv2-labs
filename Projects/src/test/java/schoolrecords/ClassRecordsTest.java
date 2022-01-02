@@ -120,33 +120,33 @@ public class ClassRecordsTest {
         assertEquals("Student by this name cannot be found! Kiss Rita", ex.getMessage());
     }
 
-    //@Test
+    @Test
     public void testFindStudentByName() {
         assertEquals("Kovács Rita", classRecords.findStudentByName("Kovács Rita").getName());
     }
 
-    //@Test
+    @Test
     public void emptyListException() throws IllegalStateException {
         Exception ex = assertThrows(IllegalStateException.class, () -> new ClassRecords("Fourth Grade", new Random()).repetition());
         assertEquals("No students to select for repetition!", ex.getMessage());
     }
 
-    //@Test
+    @Test
     public void testRepetition() {
         assertEquals("Varga Márton", classRecords.repetition().getName());
     }
 
-    //@Test
+    @Test
     public void testListStudyResults() {
-//        Given
-//        List<StudyResultByName> list = classRecords.listStudyResults();
-//        //Then
-//        assertEquals("Kovács Rita", list.get(0).getStudentName());
-//        assertEquals(3.33, list.get(0).getStudyAverage());
-//        assertEquals(3, list.size());
+        //Given
+        List<StudyResultByName> list = classRecords.listStudyResults();
+        //Then
+        assertEquals("Kovács Rita", list.get(0).getStudentName());
+        assertEquals(3.33, list.get(0).getStudyAverage());
+        assertEquals(3, list.size());
     }
 
-    //@Test
+    @Test
     public void testListStudentNames() {
         assertEquals("Kovács Rita, Nagy Béla, Varga Márton", classRecords.listStudentNames());
     }
