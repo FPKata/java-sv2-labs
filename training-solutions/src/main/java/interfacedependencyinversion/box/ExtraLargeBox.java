@@ -1,4 +1,4 @@
-package interfacedependencyinversion;
+package interfacedependencyinversion.box;
 
 public class ExtraLargeBox implements Box{
     @Override

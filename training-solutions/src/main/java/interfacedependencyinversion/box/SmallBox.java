@@ -1,4 +1,4 @@
-package interfacedependencyinversion;
+package interfacedependencyinversion.box;
 
 public class SmallBox implements Box{
     @Override

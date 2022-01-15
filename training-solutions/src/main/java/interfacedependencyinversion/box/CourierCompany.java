@@ -1,4 +1,4 @@
-package interfacedependencyinversion;
+package interfacedependencyinversion.box;
 
 public class CourierCompany {
     public static void main(String[] args) {
