@@ -10,7 +10,7 @@ public class SimpleTime {
 
     public SimpleTime(String timeString){
         if (timeString == null){
-            throw new InvalidTimeException("Time is null.");
+            throw new InvalidTimeException("Time is null");
         }
         if (timeString.length() != "hh:mm".length() || timeString.charAt(2) != ':'){
             throw new InvalidTimeException("Time is not hh:mm");
@@ -35,10 +35,10 @@ public class SimpleTime {
 
     private void set(int hour, int minute) {
         if (hour < 0 || hour > 23){
-            throw new InvalidTimeException("Hour is invalid (0 - 23)");
+            throw new InvalidTimeException("Hour is invalid (0-23)");
         }
         if (minute < 0 || minute > 59){
-            throw new InvalidTimeException("Minute is invalid (0 - 59)");
+            throw new InvalidTimeException("Minute is invalid (0-59)");
         }
         this.hour = hour;
         this.minute = minute;
