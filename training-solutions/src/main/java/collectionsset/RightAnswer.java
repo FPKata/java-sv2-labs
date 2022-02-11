@@ -1,0 +1,28 @@
+package collectionsset;
+
+import java.util.Objects;
+
+public class RightAnswer {
+    private String nameOfSolver;
+
+    public RightAnswer(String nameOfSolver) {
+        this.nameOfSolver = nameOfSolver;
+    }
+
+    public String getNameOfSolver() {
+        return nameOfSolver;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        RightAnswer rightAnswer = (RightAnswer) other;
+        return Objects.equals(nameOfSolver, rightAnswer.nameOfSolver);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameOfSolver);
+    }
+}
